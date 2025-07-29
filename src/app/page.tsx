@@ -1,5 +1,6 @@
-import { Heading } from "./components/heading";
-import { MaxWidthWrapper } from "./components/max-width-wrapper";
+import { Heading } from "@/components/ui/heading";
+import { MaxWidthWrapper } from "@/components/ui/max-width-wrapper";
+import { ShinyButton } from "@/components/ui/shiny-button";
 import { Check } from "lucide-react";
 
 export default function Home() {
@@ -8,13 +9,15 @@ export default function Home() {
     <section className="relative py-24 sm:py-32 bg-brand-25">
     <MaxWidthWrapper className="text-center"> 
       <div className="relative mx-auto text-center flex flex-col gap-10 items-center">
+        <div>
           <Heading><span>Real-Time Saas Insights,</span>
           <br />
           <span className="relative ">
             Delivered to your Discord
           </span>
           </Heading>
-      </div>
+          </div>
+      
       <p className="text-base/7">
         PingPang is the easiest way to monitor your Saas. Get instant notifications for {" "}<span className="text-gray-700"> sales, new users, or any other event</span>{" "}sent directly to your discord
       </p>
@@ -31,6 +34,10 @@ export default function Home() {
       ))}
 
       </ul>
+      <div className="w-full max-w-80">
+       <ShinyButton href="/signup" className="relative z-10 h-14 w-full text-base shadow-lg transition-shadow duration-300 hover:shadow-xl"> Start For Free Today</ShinyButton>
+      </div>
+      </div>
        </MaxWidthWrapper>
     </section>
     <section></section>
